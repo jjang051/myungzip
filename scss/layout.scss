@@ -1,0 +1,184 @@
+@import "vars";
+body {
+    font-family: "Poppins", "Noto Sans KR";
+    color: #111;
+    -webkit-font-smoothing: antialiased;
+}
+#header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding:0 50px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    &.on {
+        .btnAll span {
+            //background-color: #111;
+            &:nth-child(1) {top:40px;transform:rotate(45deg);}
+            &:nth-child(2) {opacity: 0;left:-100px;}
+            &:nth-child(3) {top:40px;transform:rotate(-45deg);}
+        }
+    }
+    #logo {
+        font-size: 18px;
+        font-weight: 100;
+        color:#fff;
+        transition: all 0.25s ease;
+
+        a {
+
+            display: block;
+            line-height: 1;
+            font-weight: 400;
+            position: relative;
+            pointer-events: none;
+            .img {
+                display: block;
+                margin-bottom: 10px;
+                img {
+                    width: 130px;
+                }
+            }
+            .txt {
+                display: block;
+                font-size: 16px;
+                text-indent: -5px;
+
+            }
+        }
+    }
+
+    .btnAll {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        top:-20px;
+        span {
+            position: absolute;
+            left:20px;
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #fff;
+            transition:all 0.25s ease;
+            &:nth-child(1) {top:25px;}
+            &:nth-child(2) {top:40px;}
+            &:nth-child(3) {top:55px;}
+        }
+    }
+}
+
+#gnb {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background-color: darken($main-color,10);
+    z-index: 9;
+    top:-100%;
+    color:#fff;
+    overflow: hidden;
+    &.main {
+        background-color: darken($main-color,10);
+        .copyright {
+            @include longShadow(darken($main-color,20),right,150);
+        }
+    }
+    &.profile {
+        background-color: darken(rgb(1, 134, 223),10);
+        .copyright {
+            @include longShadow(darken(rgb(1, 134, 223),20),right,150);
+        }
+
+    }
+    &.works {
+        background-color: darken(rgb(0, 170, 37),10);
+        .copyright {
+            @include longShadow(darken(rgb(0, 170, 37),20),right,150);
+        }
+
+    }
+    &.contact {
+        background-color: darken(rgb(158, 0, 158),10);
+        .copyright {
+            @include longShadow(darken(rgb(158, 0, 158),20),right,150);
+        }
+
+    }
+    
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        height: 100%;
+        padding-left: 50%;
+        li {
+            font-size: 120px;
+            text-transform: uppercase;
+            font-weight: 100;
+            margin: 10px 0;
+            //@include longShadow(darken($main-color,20),right,700);
+            &:hover {
+                //font-weight: 900;
+            }
+        }
+    }
+    .copyright {
+        position: absolute;
+        left:50px;
+        bottom:100px;
+        color:#fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        opacity: 1;
+        font-size: 15px;
+        @include longShadow(darken($main-color,20),right,150);
+    }
+}
+.contents {
+    padding:300px 50px 50px;
+    &#profile {
+        background: rgb(1, 134, 223);
+        h2 {
+            @include longShadow(darken(rgb(1, 134, 223),10),right,120);
+        }
+    }
+    &#works {
+        background: rgb(0, 170, 37);
+        h2 {
+            @include longShadow(darken(rgb(0, 170, 37),10),right,120);
+        }
+    }
+    &#contact {
+        background: rgb(158, 0, 158);
+        h2 {
+            @include longShadow(darken(rgb(158, 0, 158),10),right,120);
+        }
+    }
+    
+    h2 {
+        font-size: 175px;
+        margin-bottom: -30px;
+        font-weight: 900;
+        color:#fff;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        margin-left: 50px;
+        position: relative;
+        z-index: 1;
+        @include longShadow(#111,right,120);
+    }
+    .inner {
+        padding:50px;
+        background-color: #fff;
+        border-radius: 20px;
+        line-height: 1.5;
+        position: relative;
+        min-height: 1500px;
+        z-index: 2;
+    }
+}

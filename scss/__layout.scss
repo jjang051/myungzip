@@ -1,0 +1,138 @@
+@import "vars";
+html {
+    font-size: 10px;
+}
+body {
+    font-family: "Roboto","Noto Sans KR";
+    font-size: 1.6rem;
+    background: 
+    repeating-linear-gradient(90deg,rgba(255,255,255,0.05),rgba(255,255,255,0.05) 1px,0,transparent 5%) #333;
+    // margin-right: 17px;
+    overflow: hidden;
+}
+#header {
+    #logo {
+        margin-left: 50px;
+        a {
+            display: block;
+            line-height: 50px;
+            height: 50px;
+            font-weight: 900;
+            font-size: 20px;
+            padding: 0;
+            span {
+                font-weight: 100;
+            }
+        }
+    }
+}
+#header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+    background-color: #fff;
+    z-index: 2;
+    #logo {
+        margin-left: 50px;
+        a {
+            display: block;
+            line-height: 50px;
+            height: 50px;
+            font-weight: 900;
+            font-size: 20px;
+            padding: 0;
+            span {
+                font-weight: 100;
+            }
+        }
+    }
+    #gnb {
+        .gnbList {
+            display: flex;
+           
+            li {
+                position: relative;
+                &.on:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width:5px;
+                    height: 5px;
+                    background-color: #f00;
+                    left:50%;
+                    bottom: 5px;
+                    transform: translateX(-50%);
+                    border-radius: 100%;
+                }
+                a {
+                    height: 50px;
+                    line-height: 50px;
+                    padding:0 30px;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .utilMenu {
+        font-size: 1.4rem;
+        font-weight: 500;
+        display: flex;
+        a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding:0 30px;
+            border-left: 1px solid #d9d9d9;
+            position: relative;
+            .material-icons {
+                @include absCenter();
+            }
+        }
+    }
+}
+
+.gameCover {
+    display: none;
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999;
+    .contents {
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        text-align: center;
+        .title {
+            font-size: 5rem;
+            color:#fff;
+            font-weight: bold;
+        }
+        button {
+            font-size: 2rem;
+            padding:20px 50px;
+            border:none;
+            border-radius: 10px;
+            background-color: rgb(240, 208, 27);
+            box-shadow: 0 10px 0 darken(rgb(240, 208, 27),10);
+            margin-top: 20px;
+            outline:none;
+            &:active {
+                box-shadow: none;
+                transform: translateY(10px);
+            }
+        }
+        .totalResult {
+            color:#fff;
+            font-size: 5rem;
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+}

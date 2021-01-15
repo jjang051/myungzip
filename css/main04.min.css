@@ -1,0 +1,11 @@
+#main { height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+#main .carousel .list { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+#main .carousel .list li { padding: 10px 30px; background-color: #e75e03; border-radius: 100px; font-size: 18px; font-weight: 100; overflow: hidden; color: #fff; margin: 2px; text-shadow: 1px 1px 0 #b54a02,2px 2px 0 #b54a02,3px 3px 0 #b54a02,4px 4px 0 #b54a02,5px 5px 0 #b54a02,6px 6px 0 #b54a02,7px 7px 0 #b54a02,8px 8px 0 #b54a02,9px 9px 0 #b54a02,10px 10px 0 #b54a02,11px 11px 0 #b54a02,12px 12px 0 #b54a02,13px 13px 0 #b54a02,14px 14px 0 #b54a02,15px 15px 0 #b54a02,16px 16px 0 #b54a02,17px 17px 0 #b54a02,18px 18px 0 #b54a02,19px 19px 0 #b54a02,20px 20px 0 #b54a02,21px 21px 0 #b54a02,22px 22px 0 #b54a02,23px 23px 0 #b54a02,24px 24px 0 #b54a02,25px 25px 0 #b54a02,26px 26px 0 #b54a02,27px 27px 0 #b54a02,28px 28px 0 #b54a02,30px 30px 0 #b54a02;; }
+
+#input { position: fixed; width: 100%; bottom: 150px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+#input .inputBox { background-color: #fff; border-radius: 100px; padding: 5px 30px; }
+
+#input .inputBox input { height: 40px; width: 500px; border: none; font-size: 18px; }
